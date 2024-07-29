@@ -1,0 +1,50 @@
+.container {
+    max-width: 500px;
+    margin: 60px auto;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra al contenedor */
+    background-color: #a2a2b0;
+}
+
+body{
+    background-color: #11083b;
+}
+
+#item-input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra al campo de entrada */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#add-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra al botón */
+    border-radius: 4px;
+}
+
+#add-button:hover {
+    background-color: #218838;
+}
+
+#shopping-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#shopping-list li {
+    background-color: #f8f9fa;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra a los elementos de la lista */
+    border-radius: 4px;
+}

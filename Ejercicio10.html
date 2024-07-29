@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinanza</title>
+</head>
+<body>
+    <h1>Juego de Adivinanza</h1>
+    <p>Adivina un número entre 1 y 100</p>
+    <input type="text" id="userInput" placeholder="Ingresa tu número">
+    <button onclick="jugar()">Adivinar</button>
+    <p id="mensaje"></p>
+
+    <script>
+        // Generar un número aleatorio entre 1 y 100
+        let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+        let adivinado = false;
+
+        function jugar() {
+            // Obtener el valor ingresado por el usuario
+            let userInput = document.getElementById('userInput').value;
+            let mensaje = document.getElementById('mensaje');
+
+            // Convertir el valor ingresado a un número
+            let numeroUsuario = parseInt(userInput);
+
+            if (isNaN(numeroUsuario)) {
+                mensaje.textContent = 'Por favor, ingresa un número válido.';
+                return;
+            }
+
+            // Comparar el número del usuario con el número aleatorio
+            if (numeroUsuario === numeroAleatorio) {
+                mensaje.textContent = '¡Felicidades! Adivinaste el número.';
+                adivinado = true;
+            } else if (numeroUsuario < numeroAleatorio) {
+                mensaje.textContent = 'El número es mayor. Inténtalo de nuevo.';
+            } else {
+                mensaje.textContent = 'El número es menor. Inténtalo de nuevo.';
+            }
+
+            // Limpiar el input
+            document.getElementById('userInput').value = '';
+        }
+    </script>
+</body>
+</html>
